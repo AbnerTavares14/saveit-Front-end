@@ -115,8 +115,8 @@ export default function User() {
                                     )
                                 })}
                             </ContainerUsers>
-                            <Ranking><h1>Ranking of posts by likes</h1></Ranking>
-                        </> : <><Ranking><h1>Ranking of posts by likes</h1></Ranking></>}
+
+                        </> : <></>}
                     </Menu>
                     <ContainerPublications>
                         <Info>

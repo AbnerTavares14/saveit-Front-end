@@ -166,8 +166,8 @@ export default function Home() {
                                     )
                                 })}
                             </ContainerUsers>
-                            <Ranking><h1>Ranking of posts by likes</h1></Ranking>
-                        </> : <><Ranking><h1>Ranking of posts by likes</h1></Ranking></>}
+
+                        </> : <></>}
                     </Menu>
 
                     <ContainerPublications>
@@ -223,6 +223,11 @@ const Publish = styled.div`
             background-color: #C88383;
             border: 0 none;
             cursor: pointer;
+
+            &:active{
+                background-color: #832222;
+            }
+
 
             p{
                 font-family: 'Italiana', serif;

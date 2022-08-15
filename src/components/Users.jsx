@@ -9,6 +9,7 @@ export default function Users(props) {
     async function redirectUser() {
         try {
             navigate(`/user/${userId}`);
+            navigate(0)
         } catch (error) {
             console.log(error);
         }

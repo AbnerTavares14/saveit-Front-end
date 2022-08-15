@@ -58,6 +58,10 @@ const Logout = styled.button`
     top: 60px;
     right: 0;
     margin-bottom: 20px;
+    cursor: pointer;
+    &:active{
+        background-color: #832222;
+    }
     p{
         font-family: 'Judson';
         font-size: 20px;
@@ -105,6 +109,7 @@ const Top = styled.header`
         width: 48px;
         height: 48px;
         border-radius: 360px;
+        cursor: pointer;
     }
     
 `
