@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:5000/";
+const URL = "https://saveit-application.herokuapp.com/";
 
 async function signUp(data) {
     return axios.post(`${URL}signup`, data);
