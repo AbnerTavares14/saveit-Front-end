@@ -37,6 +37,7 @@ export default function Home() {
             await api.createPost({ picture: url }, user.token);
             setLoading(false);
             setPublishing(false);
+            setUrl("");
             await refreshPosts();
         } catch (error) {
             Swal.fire('ERROR!', 'error');
@@ -114,7 +115,29 @@ export default function Home() {
                         </form>}
                     </>
                     :
-                    <Header menu={menu} setMenu={setMenu} />
+                    <>
+                        <Header menu={menu} setMenu={setMenu} />
+                        <Menu>
+                            <SearchUsers>
+                                <form onSubmit={searched}>
+                                    <input name="search" type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} value={search} />
+                                </form>
+                                <ion-icon onClick={searched} name="search-outline"></ion-icon>
+
+                            </SearchUsers>
+                            {users.length > 0 ? <>
+                                <ContainerUsers>
+                                    {users.map((item) => {
+                                        return (
+                                            <Users key={item.id} picture={item.picture} username={item.username} userId={item.id} />
+                                        )
+                                    })}
+                                </ContainerUsers>
+
+                            </> : <></>}
+                        </Menu>
+                    </>
+
                 }
             </>
         )
