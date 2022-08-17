@@ -117,25 +117,6 @@ export default function Home() {
                     :
                     <>
                         <Header menu={menu} setMenu={setMenu} />
-                        <Menu>
-                            <SearchUsers>
-                                <form onSubmit={searched}>
-                                    <input name="search" type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} value={search} />
-                                </form>
-                                <ion-icon onClick={searched} name="search-outline"></ion-icon>
-
-                            </SearchUsers>
-                            {users.length > 0 ? <>
-                                <ContainerUsers>
-                                    {users.map((item) => {
-                                        return (
-                                            <Users key={item.id} picture={item.picture} username={item.username} userId={item.id} />
-                                        )
-                                    })}
-                                </ContainerUsers>
-
-                            </> : <></>}
-                        </Menu>
                     </>
 
                 }
